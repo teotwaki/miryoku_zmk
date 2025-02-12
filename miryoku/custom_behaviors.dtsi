@@ -48,7 +48,7 @@
         };
         combo_ao {
             timeout-ms = <COMBO_TIMEOUT_SLOW>;
-            key-positions = <8 13>;
+            key-positions = <9 13>;
             bindings = <&ao>;
         };
     };
