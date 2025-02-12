@@ -19,16 +19,19 @@
     macros {
         oe: oe {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <MACRO_TIMEOUT>;
             bindings = <&macro_tap &kp RA(O)>;
         };
         ae: ae {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <MACRO_TIMEOUT>;
             bindings = <&macro_tap &kp RA(SINGLE_QUOTE)>;
         };
         ao: ao {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             wait-ms = <MACRO_TIMEOUT>;
             bindings = <&macro_tap &kp RA(A)>;
         };
