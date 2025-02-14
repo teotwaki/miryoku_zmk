@@ -18,20 +18,23 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <MACRO_DELAY>;
-            bindings = <&macro_tap &kp RIGHT_ALT(O)>;
+            bindings = <&macro_tap &kp RA(O)>;
         };
+
         ae: ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <MACRO_DELAY>;
-            bindings = <&macro_tap &kp RIGHT_ALT(SINGLE_QUOTE)>;
+            bindings = <&macro_tap &kp RA(SINGLE_QUOTE)>;
         };
+
         ao: ao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <MACRO_DELAY>;
-            bindings = <&macro_tap &kp RIGHT_ALT(A)>;
+            bindings = <&macro_tap &kp RA(A)>;
         };
+
         macos_screenshot: macos_screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -44,21 +47,25 @@
 
     combos {
         compatible = "zmk,combos";
+
         combo_oe {
             timeout-ms = <COMBO_TIMEOUT_SLOW>;
             key-positions = <3 9>;
             bindings = <&oe>;
         };
+
         combo_ae {
             timeout-ms = <COMBO_TIMEOUT_FAST>;
             key-positions = <3 13>;
             bindings = <&ae>;
         };
+
         combo_ao {
             timeout-ms = <COMBO_TIMEOUT_SLOW>;
             key-positions = <9 13>;
             bindings = <&ao>;
         };
+
         combo_qr {
             timeout-ms = <COMBO_TIMEOUT_FAST>;
             key-positions = <1 4>;
