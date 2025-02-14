@@ -14,31 +14,33 @@
 
 / {
     macros {
+        compatible = "zmk,behavior-macro";
+
         oe: oe {
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <MACRO_DELAY>;
+            // right alt + o
             bindings = <&macro_tap &kp RA(O)>;
         };
 
         ae: ae {
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <MACRO_DELAY>;
+            // right alt + '
             bindings = <&macro_tap &kp RA(SINGLE_QUOTE)>;
         };
 
         ao: ao {
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <MACRO_DELAY>;
+            // right alt + a
             bindings = <&macro_tap &kp RA(A)>;
         };
 
         macos_screenshot: macos_screenshot {
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <MACRO_DELAY>;
+            // cmd + shift + 4
             bindings = <&macro_press &kp LEFT_SHIFT &kp LEFT_META>
               , <&macro_tap &kp NUMBER_4>
               , <&macro_release &kp LEFT_SHIFT &kp LEFT_META>;
