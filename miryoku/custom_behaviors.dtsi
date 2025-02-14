@@ -9,28 +9,18 @@
 
 #define COMBO_TIMEOUT_FAST 30
 #define COMBO_TIMEOUT_SLOW 40
-#define MACRO_TIMEOUT 40
+#define MACRO_DELAY 40
 
 
 / {
     macros {
-        oe: oe {
+        macos_screenshot: macos_screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <MACRO_TIMEOUT>;
-            bindings = <&macro_tap &kp RA(O)>;
-        };
-        ae: ae {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <MACRO_TIMEOUT>;
-            bindings = <&macro_tap &kp RA(SINGLE_QUOTE)>;
-        };
-        ao: ao {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <MACRO_TIMEOUT>;
-            bindings = <&macro_tap &kp RA(A)>;
+            wait-ms = <MACRO_DELAY>;
+            bindings = <&macro_press &kp LEFT_SHIFT &kp LEFT_META>
+              , <&macro_tap &kp NUMBER_4>
+              , <&macro_release &kp LEFT_SHIFT &kp LEFT_META>;
         };
     };
 
@@ -39,17 +29,22 @@
         combo_oe {
             timeout-ms = <COMBO_TIMEOUT_SLOW>;
             key-positions = <3 9>;
-            bindings = <&oe>;
+            bindings = <&kp RIGHT_ALT(O)>;
         };
         combo_ae {
             timeout-ms = <COMBO_TIMEOUT_FAST>;
             key-positions = <3 13>;
-            bindings = <&ae>;
+            bindings = <&kp RIGHT_ALT(SINGLE_QUOTE)>;
         };
         combo_ao {
             timeout-ms = <COMBO_TIMEOUT_SLOW>;
             key-positions = <9 13>;
-            bindings = <&ao>;
+            bindings = <&kp RIGHT_ALT(A)>;
+        };
+        combo_qr {
+            timeout-ms = <COMBO_TIMEOUT_FAST>;
+            key-positions = <1 4>;
+            bindings = <&macos_screenshot>;
         };
     };
 };
