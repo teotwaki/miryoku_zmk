@@ -9,29 +9,39 @@
 
 #define COMBO_TIMEOUT_FAST 30
 #define COMBO_TIMEOUT_SLOW 40
+#define MACRO_DELAY 40
+
 
 / {
     macros {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <40>;
-
         oe: oe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <MACRO_DELAY>;
             // right alt + o
             bindings = <&macro_tap &kp RA(O)>;
         };
 
         ae: ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <MACRO_DELAY>;
             // right alt + '
             bindings = <&macro_tap &kp RA(SINGLE_QUOTE)>;
         };
 
         ao: ao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <MACRO_DELAY>;
             // right alt + a
             bindings = <&macro_tap &kp RA(A)>;
         };
 
         macos_screenshot: macos_screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <MACRO_DELAY>;
             // cmd + shift + 4
             bindings = <&macro_press &kp LEFT_SHIFT &kp LEFT_META>
               , <&macro_tap &kp NUMBER_4>
